@@ -22,18 +22,21 @@ function MainSection(){
 
     return (
         <>
-            <div className="flex justify-between items-center mx-[8%] my-[3rem]">
-                <h1>Players</h1>
-                <div>
-                    <button style={activeBtn === 'availableBtn' ? active : inactive}
-                            onClick={handleClick}>Available</button>
-                    <button style={activeBtn === 'availableBtn' ? inactive : active}
-                            onClick={handleClick}>Selected</button>
+            <section className="mx-[8%] my-[3rem]">
+                <div className="flex justify-between items-center">
+                    <h1>Players</h1>
+                    <div>
+                        <button style={activeBtn === 'availableBtn' ? active : inactive}
+                                onClick={handleClick}>Available</button>
+                        <button style={activeBtn === 'availableBtn' ? inactive : active}
+                                onClick={handleClick}>Selected</button>
+                    </div>
                 </div>
-            </div>
-            <div>
-                {activeBtn === 'availableBtn' ? <Available></Available> : <Selected></Selected>}
-            </div>
+                <div>
+                    {activeBtn === 'availableBtn' ? <Available></Available> : <Selected></Selected>}
+                </div>
+            </section>
+            
         </>
     )
 }

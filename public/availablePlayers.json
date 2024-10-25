@@ -1,0 +1,113 @@
+[
+    {
+      "playerId": 1,
+      "name": "Virat Kohli",
+      "country": "India",
+      "image": "https://i.ibb.co.com/TLtfwG9/Virat-Kohli.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm medium",
+      "biddingPrice": "$2,000,000"
+    },
+    {
+      "playerId": 2,
+      "name": "Ben Stokes",
+      "country": "England",
+      "image": "https://i.ibb.co.com/WKxb5Mb/Ben-Stokes.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm fast-medium",
+      "biddingPrice": "$1,800,000"
+    },
+    {
+      "playerId": 3,
+      "name": "Steve Smith",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/t433ZGV/steve-smith.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm leg spin",
+      "biddingPrice": "$1,500,000"
+    },
+    {
+      "playerId": 4,
+      "name": "Kagiso Rabada",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/7YcKbz8/kagiso-rabada.jpg",
+      "role": "Bowler",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": "$1,200,000"
+    },
+    {
+      "playerId": 5,
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/jz4WTJ7/babar-azam.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Off-break",
+      "biddingPrice": "$1,300,000"
+    },
+    {
+      "playerId": 6,
+      "name": "Trent Boult",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/7C5p3Hj/trent-boult.jpg",
+      "role": "Bowler",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Left-arm fast-medium",
+      "biddingPrice": "$1,100,000"
+    },
+    {
+      "playerId": 7,
+      "name": "Chris Gayle",
+      "country": "West Indies",
+      "image": "https://i.ibb.co.com/H2kP7Hb/chris-gayle.jpg",
+      "role": "Batsman",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm off-break",
+      "biddingPrice": "$1,500,000"
+    },
+    {
+      "playerId": 8,
+      "name": "Lasith Malinga",
+      "country": "Sri Lanka",
+      "image": "https://i.ibb.co.com/G792BjN/lasith-malinga.jpg",
+      "role": "Bowler",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": "$1,000,000"
+    },
+    {
+      "playerId": 9,
+      "name": "AB de Villiers",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/BNNnpTc/de-villiers.jpg",
+      "role": "Wicketkeeper-batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm medium",
+      "biddingPrice": "$1,700,000"
+    },
+    {
+        "playerId": 10,
+        "name": "Pat Cummins",
+        "country": "Australia",
+        "image": "https://i.ibb.co.com/vcHF71s/Pat-Cummins.jpg",
+        "role": "Bowler",
+        "battingType": "Right-hand bat",
+        "bowlingType": "Right-arm fast",
+        "biddingPrice": "$1,600,000"
+    }
+  ]
+  
+
+
+
+
+
+
+
+
+
+  
