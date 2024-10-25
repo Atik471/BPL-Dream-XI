@@ -23,7 +23,7 @@
       "playerId": 3,
       "name": "Steve Smith",
       "country": "Australia",
-      "image": "https://i.ibb.co.com/t433ZGV/steve-smith.jpg",
+      "image": "https://i.ibb.co.com/K6JYSRc/steve-smith.jpg",
       "role": "Batsman",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm leg spin",
@@ -73,7 +73,7 @@
       "playerId": 8,
       "name": "Lasith Malinga",
       "country": "Sri Lanka",
-      "image": "https://i.ibb.co.com/G792BjN/lasith-malinga.jpg",
+      "image": "https://i.ibb.co.com/BzcszjL/lasith-malinga.png",
       "role": "Bowler",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm fast",
@@ -86,7 +86,7 @@
       "image": "https://i.ibb.co.com/BNNnpTc/de-villiers.jpg",
       "role": "Wicketkeeper-batsman",
       "battingType": "Right-hand bat",
-      "bowlingType": "Right-arm medium",
+      "bowlingType": "None",
       "biddingPrice": "$1,700,000"
     },
     {

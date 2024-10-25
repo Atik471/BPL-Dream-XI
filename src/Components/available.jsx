@@ -1,9 +1,11 @@
+import PropTypes from "prop-types"
 import Player from "./player"
 import { useEffect, useState } from "react"
 
 
-function Available(){
+function Available({selectedPlayers, setSelectedPlayers}){
     const [players, setPlayers] = useState([])
+    
 
     useEffect( () => {
         fetch('/availablePlayers.json')
@@ -11,16 +13,20 @@ function Available(){
         .then(playerList => setPlayers([...playerList]))
     }, [])
 
-    console.log(players)
-
     return (
         <>
             <div className="grid grid-cols-3 gap-4">
-                {players.map(player => <Player key={player.id} player={player}></Player>)}
+                {players.map(player => <Player key={player.id} player={player} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></Player>)}
             </div>
             
         </>
     )
 }
+
+Available.propTypes = {
+    setSelectedPlayers: PropTypes.func,
+    selectedPlayers: PropTypes.array
+}
+
 
 export default Available

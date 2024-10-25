@@ -6,14 +6,17 @@ import Selected from "./selected";
 function MainSection(){
 
     const [activeBtn, setActiveBtn] = useState('availableBtn');
+    const [selectedPlayers, setSelectedPlayers] = useState([]);
 
     const active = {
         backgroundColor: 'rgb(231, 254, 41)',
+        borderColor: 'rgb(231, 254, 41)',
         //border: '1px solid rgba(19, 19, 19, 0.1)',
         //borderRadius: '12px 0px 0px 12px',
     }
     const inactive = {
         backgroundColor: 'white',
+        borderColor: '#cbd5e1',
     }
 
     const handleClick = () => {
@@ -22,18 +25,20 @@ function MainSection(){
 
     return (
         <>
-            <section className="mx-[8%] my-[3rem]">
-                <div className="flex justify-between items-center">
-                    <h1>Players</h1>
+            <section className="mx-[8%] my-[3rem] font-sora">
+                <div className="flex justify-between items-center my-[3rem]">
+                    <h1 className="text-2xl font-bold">{activeBtn === 'availableBtn' ? 'Active Players' : 'Selected Players'}</h1>
                     <div>
-                        <button style={activeBtn === 'availableBtn' ? active : inactive}
+                        <button className="border-solid border-2 border-r-0 rounded-l-lg py-3 px-6 font-semibold"
+                                style={activeBtn === 'availableBtn' ? active : inactive}
                                 onClick={handleClick}>Available</button>
-                        <button style={activeBtn === 'availableBtn' ? inactive : active}
+                        <button className="border-solid border-2 border-l-0 rounded-r-lg py-3 px-6 font-semibold"
+                                style={activeBtn === 'availableBtn' ? inactive : active}
                                 onClick={handleClick}>Selected</button>
                     </div>
                 </div>
                 <div>
-                    {activeBtn === 'availableBtn' ? <Available></Available> : <Selected></Selected>}
+                    {activeBtn === 'availableBtn' ? <Available selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></Available> : <Selected selectedPlayers={selectedPlayers}></Selected>}
                 </div>
             </section>
             
