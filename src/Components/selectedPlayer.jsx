@@ -28,6 +28,7 @@ function SelectedPlayer({selected, setSelectedPlayers}){
                     <div>
                         <p className="text-lg font-semibold">{name}</p>
                         <p className="text-gray-600">{battingType} | {bowlingType}</p>
+                        <p className="font-semibold">{biddingPrice}</p>
                     </div>
                 </div>
                 <button onClick={handleClick} className="mr-4">

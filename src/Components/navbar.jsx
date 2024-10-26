@@ -21,9 +21,9 @@ function Navbar() {
               <a href="#">Schedules</a>
             </li>
           </ul>
-          <div className="flex gap-2">
+          <div className="flex gap-2 font-semibold">
             <span id="coin-count">0</span>
-            <span className="font-medium">Coin</span>
+            <span>Coin</span>
             <img src={coin} alt="" className="w-6 h-6"/>
           </div>
         </div>
