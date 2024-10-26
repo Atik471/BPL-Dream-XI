@@ -12,7 +12,7 @@ function Navbar() {
   
   return (
     <>
-      <div className="flex justify-between items-center px-[8%] py-[1rem] font-sora fixed top-0 left-0 right-0 bg-white w-full border-b-2 border-slate-300 z-10">
+      <div className="flex justify-between items-center md:px-[8%] px-[4%] py-[1rem] font-sora fixed top-0 left-0 right-0 bg-white w-full border-b-2 border-slate-300 z-10">
         <img src={logo} alt="logo" className="w-16 h-16"/>
         <div className="flex gap-[3rem] items-center">
           <ul className="md:flex hidden gap-[3rem]">
@@ -47,10 +47,10 @@ function Navbar() {
                 </li>
               </ul>
           </div>
-          <div className="flex gap-2 font-semibold p-2 border-2 border-slate-300 rounded-md">
+          <div className="flex gap-2 font-semibold p-2 border-2 border-slate-300 rounded-md md:text-base text-[0.9rem]">
             <span id="coin-count">0</span>
             <span>Coin</span>
-            <img src={coin} alt="" className="w-6 h-6"/>
+            <img src={coin} alt="" className="md:w-6 md:h-6 w-5 h-5"/>
           </div>
         </div>
       </div>

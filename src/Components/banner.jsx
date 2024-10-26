@@ -11,7 +11,7 @@ function Banner(){
 
     return (
         <>
-            <div className='mt-[8rem] mx-[8%] my-[3rem] bg-black flex flex-col justify-center items-center font-sora py-16 md:gap-6 gap-4 text-center rounded-3xl'
+            <div className='mt-[8rem] md:mx-[8%] mx-[4%] my-[3rem] bg-black flex flex-col justify-center items-center font-sora py-16 md:gap-6 gap-4 text-center rounded-3xl'
                  style={{backgroundImage: `url(${banner_img})`,
                          backgroundRepeat: 'no-repeat',
                          backgroundSize: 'cover',}}>

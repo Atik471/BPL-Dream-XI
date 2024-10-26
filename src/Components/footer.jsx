@@ -29,10 +29,10 @@ function Footer(){
                     <div className="mb-8">
                         <h1 className="font-semibold mb-4">Subscribe</h1>
                         <p className="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
-                        <form className="flex ">
-                            <input type="text" name="Email" placeholder="Enter Your Email" className="px-6 py-3 text-black rounded-l-md border-2 border-r-0 border-slate-300"/>
+                        <form className="flex max-w-[80%]">
+                            <input type="text" name="Email" placeholder="Enter Your Email" className="md:px-6 px-3 md:py-3 py-1 text-black rounded-l-md border-2 border-r-0 border-slate-300"/>
                             <input type="submit" value="Subscribe" style={{background: "linear-gradient(135deg, hsla(328, 49%, 61%, 1) 0%, hsla(33, 88%, 71%, 1) 50%, hsla(46, 70%, 62%, 1) 100%)"}}
-                            className="px-6 py-3 text-black font-bold rounded-r-md cursor-pointer"/>
+                            className="md:px-6 px-3 md:py-3 py-1 text-black font-bold rounded-r-md cursor-pointer"/>
                         </form>
                     </div>
                 </div>
