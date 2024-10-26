@@ -34,14 +34,14 @@ function MainSection(){
     return (
         <>
             <section className="mx-[8%] my-[3rem] font-sora">
-                <div className="flex justify-between items-center my-[3rem]">
-                    <h1 className="text-2xl font-bold">{activeBtn === 'availableBtn' ? 'Available Players' : `Selected Players(${selectedPlayers.length}/6)`}</h1>
+                <div className="flex md:flex-row flex-col gap-4 md:justify-between justify-start items-center my-[3rem]">
+                    <h1 className="md:text-2xl text-xl font-bold">{activeBtn === 'availableBtn' ? 'Available Players' : `Selected Players(${selectedPlayers.length}/6)`}</h1>
                         
                     <div>
-                        <button className="border-solid border-2 border-r-0 rounded-l-lg py-3 px-6 font-semibold"
+                        <button className="border-solid border-2 border-r-0 rounded-l-lg md:py-3 py-1 md:px-6 px-3 font-semibold"
                                 style={activeBtn === 'availableBtn' ? active : inactive}
                                 onClick={handleClick1}>Available</button>
-                        <button className="border-solid border-2 border-l-0 rounded-r-lg py-3 px-6 font-semibold"
+                        <button className="border-solid border-2 border-l-0 rounded-r-lg md:py-3 py-1 md:px-6 px-3 font-semibold"
                                 style={activeBtn === 'availableBtn' ? inactive : active}
                                 onClick={handleClick2}>Selected({selectedPlayers.length}/6)</button>
                     </div>

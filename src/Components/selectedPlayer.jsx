@@ -17,8 +17,8 @@ function SelectedPlayer({selected, setSelectedPlayers}){
 
     return (
         <>
-            <div className="flex justify-between items-center gap-4 mb-4 border-2 rounded-lg border-slate-300 p-4">
-                <div className="flex justify-center items-center gap-3">
+            <div className="flex justify-between md:items-center items-start gap-4 mb-4 border-2 rounded-lg border-slate-300 p-4">
+                <div className="flex md:flex-row flex-col md:justify-center md:items-center items-start gap-3">
                     <div className="w-16 h-16 rounded-md"
                          style={{"backgroundImage": `url(${image})`,
                                  "backgroundSize": "cover",
@@ -31,8 +31,8 @@ function SelectedPlayer({selected, setSelectedPlayers}){
                         <p className="font-semibold">{biddingPrice}</p>
                     </div>
                 </div>
-                <button onClick={handleClick} className="mr-4">
-                    <img src={trash} alt="trash" />
+                <button onClick={handleClick} className="mr-4 w-8">
+                    <img src={trash} alt="trash" className="w-8"/>
                 </button>
             </div>
         </>

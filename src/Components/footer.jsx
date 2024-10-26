@@ -6,18 +6,18 @@ function Footer(){
 
     return (
         <>
-            <div className="w-full px-[8%] py-[3rem] mt-[14rem] flex flex-col justify-center items-center bg-[#06091A] text-white relative gap-8"
+            <div className="w-full px-[8%] py-[3rem] md:mt-[14rem] mt-[18rem] flex flex-col justify-center items-center bg-[#06091A] text-white relative gap-8"
                  >
                 <Newsletter></Newsletter>
-                <div className="mt-[10%]">
+                <div className="md:mt-[10%] mt-[60%]">
                     <img src={footer_logo} alt="logo" />
                 </div>
-                <div className="flex justify-between">
-                    <div className="max-w-[23%]">
+                <div className="flex md:flex-row flex-col md:justify-between justify-center items-center md:text-left text-center">
+                    <div className="md:max-w-[23%] mb-8">
                         <h1 className="font-semibold mb-4">About Us</h1>
                         <p className="text-gray-400">We are a passionate team dedicated to providing the best services to our customers.</p>
                     </div>
-                    <div>
+                    <div className="mb-8">
                         <h1 className="font-semibold mb-4">Quick Links</h1>
                         <ul className="text-gray-400">
                             <li><a href="#">Home</a></li>
@@ -26,7 +26,7 @@ function Footer(){
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="mb-8">
                         <h1 className="font-semibold mb-4">Subscribe</h1>
                         <p className="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
                         <form className="flex ">
