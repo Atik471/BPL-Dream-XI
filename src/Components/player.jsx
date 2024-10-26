@@ -25,7 +25,7 @@ function Player({player, selectedPlayers, setSelectedPlayers}){
             setSelectedPlayers([...selectedPlayers, player])
             setChosen(!chosen)
             coinCount.innerText = Number(coinCount.innerText) - price
-            showToast("Player Selected!", "success");
+            showToast(`${name} Selected!`, "success");
         }
         else if(!exists && price > Number(coinCount.innerText)){
             showToast("You Don't Have Enough Coins!", "error");
