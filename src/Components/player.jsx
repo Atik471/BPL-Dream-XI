@@ -21,7 +21,7 @@ function Player({player, selectedPlayers, setSelectedPlayers}){
 
         const coinCount = document.getElementById("coin-count")
         let price = Number(biddingPrice.replace(/[^0-9.-]/g, ""))
-        if(!exists && price <= Number(coinCount.innerText)){
+        if(!exists && price <= Number(coinCount.innerText) && selectedPlayers.length < 6){
             setSelectedPlayers([...selectedPlayers, player])
             setChosen(!chosen)
             coinCount.innerText = Number(coinCount.innerText) - price
@@ -29,6 +29,9 @@ function Player({player, selectedPlayers, setSelectedPlayers}){
         }
         else if(!exists && price > Number(coinCount.innerText)){
             showToast("You Don't Have Enough Coins!", "error");
+        }
+        else if(!exists && selectedPlayers.length === 6){
+            showToast("You Can't Select More Than 6 Player!", "error");
         }
         else{
             showToast("Player Already Selected!", "error");

@@ -11,7 +11,7 @@ function Newsletter(){
                 <h1 className="font-bold text-2xl">Subscribe to our Newsletter</h1>
                 <p className="text-gray-500 font-semibold">Get the latest updates and news right in your inbox!</p>
                 <form>
-                    <input type="text" name="Email" className="px-6 py-3 text-black font-bold rounded-md border-2 border-slate-300 mr-3"/>
+                    <input type="text" name="Email" placeholder="Enter Your Email" className="px-6 py-3 text-black rounded-md border-2 border-slate-300 mr-3"/>
                     <input type="submit" value="Subscribe" style={{background: "linear-gradient(135deg, hsla(328, 49%, 61%, 1) 0%, hsla(33, 88%, 71%, 1) 50%, hsla(46, 70%, 62%, 1) 100%)"}}
                     className="px-6 py-3 text-black font-bold rounded-md cursor-pointer"/>
                 </form>
