@@ -1,5 +1,6 @@
 import banner_logo from '../assets/banner-main.png'
 import banner_img from '../assets/bg-shadow.png'
+import { showToast } from "./toastService"
 
 function Banner(){
     // const [coins, setCoins] = useState(0);
@@ -9,11 +10,12 @@ function Banner(){
     const handleClick = () => {
         const coinCount = document.getElementById('coin-count');
         coinCount.innerText = `${parseInt(coinCount.innerText) + 1000000}`;
+        showToast("Free Credits Claimed!", "success");
     } 
 
     return (
         <>
-            <div className='mx-[8%] my-[3rem] bg-black flex flex-col justify-center items-center font-sora py-16 gap-6
+            <div className='mt-[8rem] mx-[8%] my-[3rem] bg-black flex flex-col justify-center items-center font-sora py-16 gap-6
                             rounded-3xl'
                  style={{backgroundImage: `url(${banner_img})`,
                          backgroundRepeat: 'no-repeat',

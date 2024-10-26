@@ -1,31 +1,18 @@
 import PropTypes from "prop-types"
 import trash from "../assets/trash-bin.png"
+import { showToast } from "./toastService"
 
 function SelectedPlayer({selected, setSelectedPlayers}){
 
-    const {playerId, name, image, battingType, bowlingType} = selected
-
-    // useEffect(() => {
-    //     localStorage.setItem('selectedPlayers', JSON.stringify(selectedPlayers));
-    // }, [selectedPlayers])
-    // useEffect(() => {
-    //     const activeBtn = JSON.parse(localStorage.getItem('selectedPlayers'))
-    //     setChosen(activeBtn.some(p => p.playerId === playerId))
-    // }, [])
-
+    const {playerId, name, image, battingType, bowlingType, biddingPrice} = selected
     
     const handleClick = () => {
         let newSelected = JSON.parse(localStorage.getItem('selectedPlayers'))
-        // let exists = newSelected.some(p => p.playerId === playerId)
-        // if(!exists){
-        //     setSelectedPlayers([...selectedPlayers, player])
-        //     setChosen(!chosen)
-        // }
-        // else{
-        console.log(newSelected)
-            setSelectedPlayers(newSelected.filter(p => p.playerId !== playerId))
-        //     setChosen(!chosen)
-        // }
+        setSelectedPlayers(newSelected.filter(p => p.playerId !== playerId))
+        const coinCount = document.getElementById("coin-count")
+        let price = Number(biddingPrice.replace(/[^0-9.-]/g, ""))
+        coinCount.innerText = Number(coinCount.innerText) + price
+        showToast("Player Removed!", "success");
     }
 
     return (

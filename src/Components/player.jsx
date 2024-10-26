@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import profileImg from "../assets/profile.png"
 import flagImg from "../assets/flag.png"
 import { useEffect, useState } from "react"
+import { showToast } from "./toastService"
 
 function Player({player, selectedPlayers, setSelectedPlayers}){
     const [chosen, setChosen] = useState(false)
@@ -19,17 +20,18 @@ function Player({player, selectedPlayers, setSelectedPlayers}){
         let exists = newSelected.some(p => p.playerId === playerId)
 
         const coinCount = document.getElementById("coin-count")
-        console.log(Number(biddingPrice.replace(/[^0-9.-]/g, "")) , Number(coinCount.innerText))
         let price = Number(biddingPrice.replace(/[^0-9.-]/g, ""))
         if(!exists && price <= Number(coinCount.innerText)){
             setSelectedPlayers([...selectedPlayers, player])
             setChosen(!chosen)
             coinCount.innerText = Number(coinCount.innerText) - price
+            showToast("Player Selected!", "success");
+        }
+        else if(!exists && price > Number(coinCount.innerText)){
+            showToast("You Don't Have Enough Coins!", "error");
         }
         else{
-            setSelectedPlayers(newSelected.filter(p => p.playerId !== playerId))
-            setChosen(!chosen)
-            coinCount.innerText = Number(coinCount.innerText) + price 
+            showToast("Player Already Selected!", "error");
         }
     }
 
