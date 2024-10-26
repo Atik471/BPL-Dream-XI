@@ -1,17 +1,20 @@
 import PropTypes from "prop-types"
-
-function Selected({selectedPlayers}){
-    console.log(selectedPlayers)
+import SelectedPlayer from "./selectedPlayer"
+function Selected({selectedPlayers, setSelectedPlayers}){
+    
 
     return (
         <>
-            <h1>Selected</h1>
+            {
+                selectedPlayers.map(selected => <SelectedPlayer key={selected.id} selected={selected} setSelectedPlayers={setSelectedPlayers}></SelectedPlayer>)
+            }
         </>
     )
 }
 
 Selected.propTypes = {
-    selectedPlayers: PropTypes.array
+    selectedPlayers: PropTypes.array,
+    setSelectedPlayers: PropTypes.func,
 }
 
 export default Selected

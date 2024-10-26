@@ -16,7 +16,7 @@ function Available({selectedPlayers, setSelectedPlayers}){
     return (
         <>
             <div className="grid grid-cols-3 gap-4">
-                {players.map(player => <Player key={player.id} player={player} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></Player>)}
+                {players.map(player => <Player key={player.playerId} player={player} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></Player>)}
             </div>
             
         </>

@@ -1,12 +1,36 @@
 import PropTypes from "prop-types"
 import profileImg from "../assets/profile.png"
 import flagImg from "../assets/flag.png"
+import { useEffect, useState } from "react"
 
 function Player({player, selectedPlayers, setSelectedPlayers}){
-    const {name, country, image, role, battingType, bowlingType, biddingPrice } = player
+    const [chosen, setChosen] = useState(false)
+    const {playerId, name, country, image, role, battingType, bowlingType, biddingPrice } = player
 
+    
+    useEffect(() => {
+        const activeBtn = JSON.parse(localStorage.getItem('selectedPlayers'))
+        setChosen(activeBtn.some(p => p.playerId === playerId))
+    }, [])
+
+    
     const handleClick = () => {
-        setSelectedPlayers([...selectedPlayers, player])
+        let newSelected = JSON.parse(localStorage.getItem('selectedPlayers'))
+        let exists = newSelected.some(p => p.playerId === playerId)
+
+        const coinCount = document.getElementById("coin-count")
+        console.log(Number(biddingPrice.replace(/[^0-9.-]/g, "")) , Number(coinCount.innerText))
+        let price = Number(biddingPrice.replace(/[^0-9.-]/g, ""))
+        if(!exists && price <= Number(coinCount.innerText)){
+            setSelectedPlayers([...selectedPlayers, player])
+            setChosen(!chosen)
+            coinCount.innerText = Number(coinCount.innerText) - price
+        }
+        else{
+            setSelectedPlayers(newSelected.filter(p => p.playerId !== playerId))
+            setChosen(!chosen)
+            coinCount.innerText = Number(coinCount.innerText) + price 
+        }
     }
 
     return (
@@ -33,7 +57,9 @@ function Player({player, selectedPlayers, setSelectedPlayers}){
                 
                 <div className="flex justify-between items-center">
                 <p className="font-bold">Price: {biddingPrice}</p>
-                <button onClick={handleClick} className="px-3 py-1 border-solid border-2 border-slate-300 hover:bg-custom-golden hover:border-white duration-300 transition-all rounded-lg">Choose Player</button>
+                <button onClick={handleClick} className={`px-3 py-1 border-solid border-2 border-slate-300  hover:border-white duration-300 transition-all rounded-lg ${chosen ? "bg-custom-golden" : "bg-slate-200 hover:bg-custom-golden"}`}
+                //style={chosen ? select : deselect}
+                  id="chooseBtn">Choose Player</button>
                 </div>
             </div>
         </>
