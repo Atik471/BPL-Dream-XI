@@ -15,3 +15,6 @@ BPL Dream XI is a Frontend project using React JS. The player data are fetched f
 - Remove Players
 - Claim free coins
 - Dynamic
+
+## Site Link:
+[Live Site](BPL-Dream-XI-Atik.surge.sh)
